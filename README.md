@@ -1,3 +1,1 @@
-# react-contextapi-example
-
-A demo application of the React Context API
+# React - Context API - Example
