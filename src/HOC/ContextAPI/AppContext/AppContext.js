@@ -10,7 +10,11 @@ class AppContextProvider extends Component {
   };
 
   render() {
-    return <AppContext.Provider value={this.state} />;
+    return (
+      <AppContext.Provider value={this.state}>
+        {this.props.children}
+      </AppContext.Provider>
+    );
   }
 }
 
