@@ -6,23 +6,23 @@ import {
   ControlIcon,
   StyledRow,
   StyledCol
-} from "../../components/sharedStyles/sharedStyles";
+} from "../sharedStyles/sharedStyles";
 
 import { AppContextConsumer } from "../../HOC/ContextAPI/AppContext/AppContext";
 
-const ControlPanel = () => {
+const PanelTwo = () => {
   return (
     <PanelContainer>
       <AppContextConsumer>
         {appContext => (
           <StyledRow>
             <StyledCol xs={12} sm={12} md={6}>
-              <ControlIcon onClick={() => appContext.updateTitles(0)}>
-                <MdAddCircle />
+              <ControlIcon>
+                <MdAddCircle onClick={() => appContext.updateTitles(2)} />
               </ControlIcon>
             </StyledCol>
             <StyledCol xs={12} sm={12} md={6}>
-              {appContext.state.controlPaneltitle}
+              {appContext.state.panelTwoTitle}
             </StyledCol>
           </StyledRow>
         )}
@@ -31,4 +31,4 @@ const ControlPanel = () => {
   );
 };
 
-export default ControlPanel;
+export default PanelTwo;

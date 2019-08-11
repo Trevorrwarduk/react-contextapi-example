@@ -58,6 +58,7 @@ const ControlIcon = styled.button`
   height: 35px;
   width: 35px;
   font-size: 25px;
+  margin: 0 10px;
   border: 1px solid ${COLOR.DARKBACK};
   cursor: pointer;
   background: transparent;
@@ -67,6 +68,7 @@ const ControlIcon = styled.button`
     color: rgba(20, 200, 20, 1);
   }
 `;
+
 export {
   COLOR,
   Container,
