@@ -8,27 +8,27 @@ import {
   ControlIcon,
   StyledRow,
   StyledCol
-} from "../components/sharedStyles/sharedStyles";
+} from "../sharedStyles/sharedStyles";
 
-import { AppContext } from "../HOC/ContextAPI/AppContext/AppContext";
-import context from "../__mocks__/AppContextMock";
+import { AppContext } from "../../HOC/ContextAPI/AppContext/AppContext";
+import context from "../../__mocks__/AppContextMock";
 
-import ControlPanel from "../components/controlPanel/controlPanel";
+import PanelOne from "./panelOne";
 
-describe("<Control Panel> ", () => {
+describe("<PanelOne> ", () => {
   let renderedComponent;
   let testInstance;
 
   beforeEach(() => {
     renderedComponent = create(
       <AppContext.Provider value={context}>
-        <ControlPanel />
+        <PanelOne />
       </AppContext.Provider>
     );
     testInstance = renderedComponent.root;
   });
 
-  it("should test the Control Panel Snapshot", () => {
+  it("should test the Panel Snapshot", () => {
     expect(renderedComponent).toMatchSnapshot();
   });
 
@@ -44,7 +44,7 @@ describe("<Control Panel> ", () => {
     expect(iconChk).toHaveLength(1);
 
     // Check the text displayed
-    expect(styColChk[1].children[0].props.children).toEqual("Control Panel");
+    expect(styColChk[1].children[0].props.children).toEqual("Panel One");
   });
 
   it("should check the correct icon is displayed and the function is called", () => {
@@ -55,6 +55,6 @@ describe("<Control Panel> ", () => {
     contIconChk[0].props.onClick();
 
     expect(context.updateTitles).toHaveBeenCalled();
-    expect(context.updateTitles).toHaveBeenCalledWith(0);
+    expect(context.updateTitles).toHaveBeenCalledWith(1);
   });
 });

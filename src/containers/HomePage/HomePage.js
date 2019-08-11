@@ -20,12 +20,12 @@ class HomePage extends Component {
     return (
       <Container>
         <StyledRow>
-          <StyledCol xs={12} sm={12} md={12} lg={12} gutter={1}>
+          <StyledCol xs={12} sm={12} md={12} lg={12}>
             <h3>{this.context.state.homePageTitle}</h3>
           </StyledCol>
         </StyledRow>
         <StyledRow>
-          <StyledCol xs={12} sm={12} md={12} lg={12} gutter={1}>
+          <StyledCol xs={12} sm={12} md={12} lg={12}>
             <Panel>
               <Title>Control Panel</Title>
               <ControlPanel />
@@ -33,19 +33,19 @@ class HomePage extends Component {
           </StyledCol>
         </StyledRow>
         <StyledRow>
-          <StyledCol xs={12} sm={12} md={3} lg={4} gutter={1}>
+          <StyledCol xs={12} sm={12} md={3} lg={4}>
             <Panel>
               <Title>Panel One</Title>
               <PanelOne />
             </Panel>
           </StyledCol>
-          <StyledCol xs={12} sm={12} md={4} lg={4} gutter={1}>
+          <StyledCol xs={12} sm={12} md={4} lg={4}>
             <Panel>
               <Title>Panel Two</Title>
               <PanelTwo />
             </Panel>
           </StyledCol>
-          <StyledCol xs={12} sm={12} md={4} lg={4} gutter={1}>
+          <StyledCol xs={12} sm={12} md={4} lg={4}>
             <Panel>
               <Title>Panel Three</Title>
               <PanelThree />

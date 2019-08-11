@@ -6,7 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "react-scripts test --coverage",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint src/**/*.js",
     "sonarQube": "sonar-scanner",
     "eject": "react-scripts eject"
@@ -17,7 +17,6 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
-      "!src/__tests__/**/*.js",
       "!src/index.js"
     ]
   },

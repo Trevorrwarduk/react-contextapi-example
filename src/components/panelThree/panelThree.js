@@ -17,8 +17,8 @@ const PanelThree = () => {
         {appContext => (
           <StyledRow>
             <StyledCol xs={12} sm={12} md={6}>
-              <ControlIcon>
-                <MdAddCircle onClick={() => appContext.updateTitles(3)} />
+              <ControlIcon onClick={() => appContext.updateTitles(3)}>
+                <MdAddCircle />
               </ControlIcon>
             </StyledCol>
             <StyledCol xs={12} sm={12} md={6}>
